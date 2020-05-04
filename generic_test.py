@@ -11,4 +11,4 @@ ENDPOINTS = [
 ]
 
 gc = GenericClient(API_URL, ENDPOINTS)
-print(gc.endpoint_methods)
+print(gc.VideosMethod())
