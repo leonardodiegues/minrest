@@ -1,6 +1,6 @@
-===================
-Generic REST Client
-===================
+==============================
+Minimalist Generic REST Client
+==============================
 
 
 .. image:: https://img.shields.io/pypi/v/grest.svg
@@ -16,7 +16,7 @@ Generic REST Client
 
 
 
-Universal REST API client for Python
+Minimalist generic REST API client for Python
 
 
 * Free software: MIT license
@@ -27,6 +27,8 @@ Features
 --------
 
 * TODO
+[ ] GenericClient may receive a single endpoint or an endpoint list
+[ ] Create method for each endpoint automatically
 
 Credits
 -------
