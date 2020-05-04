@@ -26,11 +26,13 @@ class GenericClient(object):
             return self._endpoints[self.method_index[method_name]]
         return self._endpoints
 
-    def __request(self, **kwargs):
+    def __request(self, add_to_endpoint=None, **kwargs):
         [code_context] = inspect.stack()[1][4]
         regexp = re.compile(r"\.(.*?)\(")
         method_name = regexp.search(code_context).group(1)
-        endpoint = self.__raw_endpoint(method_name)
+        raw_endpoint = self.__raw_endpoint(method_name)
+        endpoint = urljoin(endpoint, add_to_endpoint) \
+            if add_to_endpoint is not None else raw_endpoint
         url = urljoin(self.api_url, endpoint)
         return requests.request(url=url, **kwargs)
 
