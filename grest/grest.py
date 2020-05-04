@@ -32,7 +32,7 @@ class GenericClient(object):
         method_name = regexp.search(code_context).group(1)
         endpoint = self.__raw_endpoint(method_name)
         url = urljoin(self.api_url, endpoint)
-        return requests.Request({'url': url, **kwargs})
+        return requests.request(url=url, **kwargs)
 
     def __make_endpoint_methods(self):
         if isinstance(self._endpoints, list):
