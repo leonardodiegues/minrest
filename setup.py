@@ -10,7 +10,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = ["requests", "pandas"]
 
 setup_requirements = [ ]
 
@@ -31,18 +31,18 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="Universal REST API client for Python",
+    description="Minimalistic generic REST API client for Python",
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
-    keywords='grest',
-    name='grest',
-    packages=find_packages(include=['grest', 'grest.*']),
+    keywords='minrest',
+    name='minrest',
+    packages=find_packages(include=['minrest', 'minrest.*']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/leonardodiegues/grest',
+    url='https://github.com/leonardodiegues/minrest',
     version='0.0.1',
     zip_safe=False,
 )

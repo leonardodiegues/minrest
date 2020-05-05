@@ -1,4 +1,4 @@
-* Generic REST Client version:
+* Minimalistic generic REST Client version:
 * Python version:
 * Operating System:
 

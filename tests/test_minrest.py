@@ -5,11 +5,11 @@
 
 import unittest
 
-from grest import grest
+from minrest import minrest
 
 
-class TestGrest(unittest.TestCase):
-    """Tests for `grest` package."""
+class TestMinrest(unittest.TestCase):
+    """Tests for `minrest` package."""
 
     def setUp(self):
         """Set up test fixtures, if any."""

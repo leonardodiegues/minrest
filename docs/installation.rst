@@ -12,7 +12,7 @@ To install Generic REST Client, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install grest
+    $ pip install minrest
 
 This is the preferred method to install Generic REST Client, as it will always install the most recent stable release.
 
@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/leonardodiegues/grest
+    $ git clone git://github.com/leonardodiegues/minrest
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/leonardodiegues/grest/tarball/master
+    $ curl -OJL https://github.com/leonardodiegues/minrest/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/leonardodiegues/grest
-.. _tarball: https://github.com/leonardodiegues/grest/tarball/master
+.. _Github repo: https://github.com/leonardodiegues/minrest
+.. _tarball: https://github.com/leonardodiegues/minrest/tarball/master
