@@ -28,7 +28,10 @@ class GenericClient(object):
 
     @staticmethod
     def __make_method_name(name):
-        return name.replace('-', '_').title().replace('_', '')
+        name = re.sub('\W', '_', name)
+        name = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+        name = re.sub('([a-z0-9])([A-Z])', r'\1_\2', name).lower()
+        return re.sub('_{2,}', '_', name) + '_method'
 
     def __raw_endpoint(self, method_name):
         if isinstance(self._endpoints, list):
@@ -48,10 +51,10 @@ class GenericClient(object):
     def __make_endpoint_methods(self):
         if isinstance(self._endpoints, list):
             for index, endpoint in enumerate(self._endpoints):
-                method_name = self.__make_method_name(endpoint) + "Method"
+                method_name = self.__make_method_name(endpoint)
                 self.method_index.update({method_name: index})
                 setattr(self.__class__, method_name, self.__request)
         else:
-            method_name = self.__make_method_name(self._endpoints) + "Method"
+            method_name = self.__make_method_name(self._endpoints)
             self.method_index.update({method_name: 1})
             setattr(self.__class__, method_name, self.__request)
