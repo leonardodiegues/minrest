@@ -6,9 +6,6 @@ from urllib.parse import urljoin
 
 from minrest import parser
 
-def _make_method_name(name):
-    return name.replace('-', '_').title().replace('_', '')
-
 
 class GenericClient(object):
 
@@ -30,8 +27,8 @@ class GenericClient(object):
         return [x for x in dir(self.__class__) if x.endswith('Method')]
 
     @staticmethod
-    def __make_method_name():
-        return
+    def __make_method_name(name):
+        return name.replace('-', '_').title().replace('_', '')
 
     def __raw_endpoint(self, method_name):
         if isinstance(self._endpoints, list):
