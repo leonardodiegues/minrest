@@ -3,14 +3,14 @@ Minimalist Generic REST Client
 ==============================
 
 
-.. image:: https://img.shields.io/pypi/v/grest.svg
-        :target: https://pypi.python.org/pypi/grest
+.. image:: https://img.shields.io/pypi/v/minrest.svg
+        :target: https://pypi.python.org/pypi/minrest
 
-.. image:: https://img.shields.io/travis/leonardodiegues/grest.svg
-        :target: https://travis-ci.com/leonardodiegues/grest
+.. image:: https://img.shields.io/travis/leonardodiegues/minrest.svg
+        :target: https://travis-ci.com/leonardodiegues/minrest
 
-.. image:: https://readthedocs.org/projects/grest/badge/?version=latest
-        :target: https://grest.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/minrest/badge/?version=latest
+        :target: https://minrest.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
@@ -20,15 +20,13 @@ Minimalist generic REST API client for Python
 
 
 * Free software: MIT license
-* Documentation: https://grest.readthedocs.io.
+* Documentation: https://minrest.readthedocs.io.
 
 
 Features
 --------
 
 * TODO
-[ ] GenericClient may receive a single endpoint or an endpoint list
-[ ] Create method for each endpoint automatically
 
 Credits
 -------
