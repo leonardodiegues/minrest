@@ -24,8 +24,8 @@ deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: leonardodiegues
-  password: 82HaghiMGu-_a_cgEL!G
-    secure: PLEASE_REPLACE_ME
+  password:
+    secure: 82HaghiMGu-_a_cgEL!G
   on:
     tags: true
     repo: leonardodiegues/minrest
