@@ -25,7 +25,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: leonardodiegues
   password:
-    secure: 82HaghiMGu-_a_cgEL!G
+    secure:
   on:
     tags: true
     repo: leonardodiegues/minrest
