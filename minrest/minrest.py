@@ -6,6 +6,11 @@ from urllib.parse import urljoin
 
 from minrest import parser
 
+def build_url(api_url, *args):
+    api_url = re.sub(r'\/$', '', api_url)
+    endpoint = '/'.join(list(map(lambda x: re.sub(r'^\/|\/$', '', x), args)))
+    return api_url + '/' + endpoint
+
 
 class GenericClient(object):
 
@@ -14,7 +19,7 @@ class GenericClient(object):
         self.endpoints = endpoints
 
     def call(self, endpoint, *args, **kwargs):
-        if not self.is_valid_endpoint(endpoint):
+        if not self._is_valid_endpoint(endpoint):
             raise ValueError(f'Invalid endpoint: {endpoint}')
 
         return (
