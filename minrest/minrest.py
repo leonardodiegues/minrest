@@ -22,13 +22,7 @@ class GenericClient(object):
         if not self._is_valid_endpoint(endpoint):
             raise ValueError(f'Invalid endpoint: {endpoint}')
 
-        return (
-            requests
-            .request(
-                urljoin(self.api_url, endpoint),
-                *args, **kwargs
-            )
-        )
+        return requests.request(url=urljoin(self.api_url, endpoint), **kwargs)
 
     def _is_valid_endpoint(self, endpoint):
         return endpoint in self.endpoints
