@@ -9,7 +9,7 @@ from minrest import parser
 
 class GenericClient(object):
 
-    def __init__(self, api_url, endpoint):
+    def __init__(self, api_url, endpoints):
         self.api_url = api_url
         self.endpoints = endpoints
 
